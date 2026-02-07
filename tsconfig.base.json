@@ -2,19 +2,34 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
     "sourceMap": true,
     "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {}
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@ngproto/ui": ["packages/ui/src/index.ts"],
+      "@ngproto/ui/utils": ["packages/ui/utils/src/index.ts"],
+      "@ngproto/ui/button": ["packages/ui/button/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
